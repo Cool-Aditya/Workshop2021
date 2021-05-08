@@ -6,17 +6,13 @@ import {
   Avatar,
   Toolbar,
   Typography,
-  IconButton,
   Drawer,
-  ListItem,
-  ListItemText,
   CssBaseline,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Divider from "@material-ui/core/Divider";
 import SimplePaper from "./Paper";
-import Tabs from "./Tabs";
-import List from "./List";
+
 import { Delete, DriveEtaOutlined } from "@material-ui/icons";
 import CreateOutlinedIcon from "@material-ui/icons/CreateOutlined";
 
