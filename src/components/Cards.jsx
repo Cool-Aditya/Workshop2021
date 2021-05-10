@@ -14,28 +14,29 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
   root: {
     width: 290,
-    height: "11vh",
+    height: "10vh",
   },
   margin: {
     marginRight: 15,
   },
   marginleft: {
-    marginLeft: 65,
+    marginRight: 5,
+    marginLeft: 60,
   },
   height: {
-    height: 15,
+    height: 10,
     width: 200,
     alignItems: "center",
   },
   title: {
-    fontSize: 14,
+    fontSize: 11,
   },
   subTitle: {
     fontSize: 10,
   },
 }));
 
-function Cards({ url, color }) {
+function Cards({ url, color, name, subtitle }) {
   const classes = useStyles();
   return (
     <Container className={classes.root}>
@@ -45,17 +46,13 @@ function Cards({ url, color }) {
             <Avatar className={classes.margin} src={url} />
             <Box display="flex" flexDirection="column">
               <Typography className={classes.title} varient="h4">
-                Post Title
+                {<b>{name}</b>}
               </Typography>
               <Typography className={classes.subTitle} varient="h6">
-                My name is khan
+                {subtitle}
               </Typography>
             </Box>
-            <Badge
-              color="secondary"
-              variant="dot"
-              className={classes.marginleft}
-            />
+            <Badge color={color} variant="dot" className={classes.marginleft} />
           </Box>
         </CardContent>
       </Card>
